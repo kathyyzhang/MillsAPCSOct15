@@ -6,7 +6,7 @@
  */
 public class Equestria
 {
-    public static void main(String[] args)
+   public static void main(String[] args)
     {
         /*//Baltimare
         int xbalt=31;
@@ -26,15 +26,18 @@ public class Equestria
         //Ponyville
         int xpony=17;
         int ypony=13;*/
-
+        
+        System.out.print("Distance from Baltimare to Manehattan = ");
         distance(8, 17, 27, 22);
-        dist(8, 17, 27, 22, 17, 13);
+        
+        //dist(8, 17, 27, 22, 17, 13);
         //roadTrip();
     }
 
     public static double distance(int x1, int y1, int x2, int y2){
-        double dist= Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-        return dist;
+       //double d1= Math.sqrt(Math.pow(double x2-x1, 2)+Math.pow(double y2-y1, 2))*100;
+       //return d1;
+       
     }
 
     /*public static void roadTrip(){
