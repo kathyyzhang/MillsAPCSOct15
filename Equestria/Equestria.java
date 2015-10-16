@@ -6,7 +6,7 @@
  */
 public class Equestria
 {
-   public static void main(String[] args)
+    public static void main(String[] args)
     {
         /*//Baltimare
         int xbalt=31;
@@ -26,18 +26,19 @@ public class Equestria
         //Ponyville
         int xpony=17;
         int ypony=13;*/
-        
-        System.out.print("Distance from Baltimare to Manehattan = ");
-        distance(8, 17, 27, 22);
-        
+        double d=distance(8, 17, 27, 22);
+
+        System.out.println("Distance from Baltimare to Manehattan = " + d);
+        dist(5, 6, 7, 2, 3, 4);
         //dist(8, 17, 27, 22, 17, 13);
         //roadTrip();
     }
 
     public static double distance(int x1, int y1, int x2, int y2){
-       //double d1= Math.sqrt(Math.pow(double x2-x1, 2)+Math.pow(double y2-y1, 2))*100;
-       //return d1;
-       
+        double d1= Math.sqrt(Math.pow( x2-x1, 2)+Math.pow(y2-y1, 2))*100;
+        int d2 = (int)d1;
+        return 0.01 * d2;
+
     }
 
     /*public static void roadTrip(){
@@ -45,11 +46,11 @@ public class Equestria
     double c=diameter*Math.PI;
     return c;*/
 
-    public static double dist(int x1, int y1, int x2, int y2, int x3, int y3){ 
-        double distx1x2= Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-        double distx2x3= Math.sqrt((x3-x2)*(x3-x2)+(y3-y2)*(y3-y2));
-        double distx1x3= Math.sqrt((x1-x3)*(x1-x3)+(y1-y3)*(y1-y3));
-        return distx1x3;
+    public static void dist(int x1, int y1, int x2, int y2, int x3, int y3){ 
+        double distx1x2= distance(x1, y1, x2, y2);
+        double distx2x3= distance(x2, y2, x3, y3);
+        double distx1x3= distance(x1, y1, x3, y3);
+        System.out.println(distx1x2);
     }  
-    
+
 }
